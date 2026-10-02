@@ -26,6 +26,7 @@ Consulte a documentação técnica detalhada em:
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — Especificação detalhada da arquitetura, rede, algoritmos espaciais e modelo de concorrência.
 - [docs/POTATO_BUDGET.md](docs/POTATO_BUDGET.md) — Guia de engenharia e limites para rodar 200-500 CCU em 1 vCPU e 512MB RAM.
 - [docs/SPEC-DRIVEN.md](docs/SPEC-DRIVEN.md) — Metodologia de desenvolvimento guiada por especificações, ciclo de vida de features e template de RFCs.
+- [DEV-SETUP.md](DEV-SETUP.md) — Guia de configuração do ambiente de desenvolvimento (Ubuntu, Debian, Fedora, Rocky Linux e Omarchy/Arch).
 
 ---
 
