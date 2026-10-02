@@ -16,6 +16,7 @@ O **Hades** nasce para romper com a arquitetura herdada dos anos 2000 (rAthena, 
 3. **Potato-Ready ($4/mês = 500 CCU):** Otimizado para rodar com zero alocações na heap durante o tick e batching de syscalls (`sendmmsg`), consumindo menos de 50MB de RAM.
 4. **Escala Flexível com Hardware Bleeding Edge:** Alvo nativo em **ARM64** e **x86_64**, com aceleração opcional via **Vulkan Compute / wgpu** (Flow fields massivos) e **ONNX/IA local** (anti-cheat comportamental e NPCs inteligentes).
 5. **Developer Experience (DX) para Indies:** Game logic em **WASM** ou **Lua** com hot-reload em tempo de execução, e SDKs clientes prontos para **Godot, Unity e Bevy**.
+6. **Spec-Driven & Test-First (SDD/TDD):** Nenhuma linha de lógica é implementada sem especificação prévia aprovada, contratos de dados explícitos e suíte completa de testes unitários.
 
 ---
 
@@ -24,6 +25,7 @@ O **Hades** nasce para romper com a arquitetura herdada dos anos 2000 (rAthena, 
 Consulte a documentação técnica detalhada em:
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — Especificação detalhada da arquitetura, rede, algoritmos espaciais e modelo de concorrência.
 - [docs/POTATO_BUDGET.md](docs/POTATO_BUDGET.md) — Guia de engenharia e limites para rodar 200-500 CCU em 1 vCPU e 512MB RAM.
+- [docs/SPEC-DRIVEN.md](docs/SPEC-DRIVEN.md) — Metodologia de desenvolvimento guiada por especificações, ciclo de vida de features e template de RFCs.
 
 ---
 
