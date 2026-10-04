@@ -1,0 +1,12 @@
+[package]
+name = "hades-ro-prere"
+version = "0.1.0"
+edition = "2021"
+authors = ["Hades Core Team"]
+description = "Classic 2.5D Pre-Renewal game rules, stats, combat and GAT map parser for Hades"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+hades-core = { path = "../hades-core" }
+thiserror = "1.0"
+encoding_rs = "0.8"

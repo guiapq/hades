@@ -16,6 +16,16 @@ Thumbs.db
 *.dump
 *.sql
 
-# Local Configuration
+# Local Configuration & Secrets
 .env
-.env.local
+.env.*
+!.env.example
+
+# Local Data & Archives
+*.grf
+data.grf
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.ppm

@@ -1,0 +1,18 @@
+# Configuração do Hades para GCP Always Free (e2-micro)
+# Substitua <IP_PUBLICO_GCP> pelo IP externo da sua instância no Google Cloud
+
+# Endereço de Bind dos Servidores (0.0.0.0 escuta em todas as interfaces)
+HADES_BIND=0.0.0.0:4433
+HADES_WORLD_BIND=0.0.0.0:4434
+HADES_WORLD_QUIC_BIND=0.0.0.0:4434
+
+# IP Público informado aos clientes ao completarem o login
+HADES_WORLD_IP=<IP_PUBLICO_GCP>
+HADES_WORLD_PORT=4434
+HADES_WORLD_NAME=Hades GCP Midgard
+
+# Banco de dados SQLite de autenticação
+HADES_DB_URL=sqlite://hades_login.db?mode=rwc
+
+# Nível de Log
+RUST_LOG=info,hades_login=info,hades_world=info,hades_net=info

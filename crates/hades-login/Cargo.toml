@@ -1,0 +1,47 @@
+[package]
+name        = "hades-login"
+version.workspace   = true
+edition.workspace   = true
+authors.workspace   = true
+license.workspace   = true
+description = "Servidor de autenticação e seleção de personagens do Hades (WebTransport/QUIC + JSON)"
+
+[[bin]]
+name = "hades-login"
+path = "src/main.rs"
+
+[lib]
+name = "hades_login"
+path = "src/lib.rs"
+
+[dependencies]
+hades-core = { path = "../hades-core" }
+hades-net  = { path = "../hades-net" }
+
+# Async & Transport
+tokio             = { version = "1", features = ["full"] }
+quinn             = "0.11"
+tokio-tungstenite = "0.26"
+futures-util      = "0.3"
+
+# JSON (protocolo de wire)
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Cripto (hash de senha)
+sha2    = "0.10"
+hex     = "0.4"
+rand    = "0.8"
+argon2  = "0.5"    # hash de senha no servidor (Argon2id)
+
+# DB (SQLite, dev)
+sqlx = { version = "0.8", features = ["runtime-tokio", "sqlite", "macros"] }
+
+# Erros / logs / env
+thiserror          = "1"
+tracing            = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+dotenvy            = "0.15"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "test-util"] }

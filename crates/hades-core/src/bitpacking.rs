@@ -177,7 +177,10 @@ mod tests {
                         );
                         let bytes = delta.encode();
                         let recovered = MovementDelta::decode(&bytes).unwrap();
-                        assert_eq!(delta, recovered, "Falha de fidelidade na coordenada ({x}, {y})");
+                        assert_eq!(
+                            delta, recovered,
+                            "Falha de fidelidade na coordenada ({x}, {y})"
+                        );
                     }
                 }
             }

@@ -3,13 +3,28 @@
 //! Núcleo fundamental de tipos, serialização compacta e simulação determinística
 //! para motores de MMORPGs 2D/2.5D.
 
+pub mod aoi;
 pub mod bitpacking;
 pub mod collision;
+pub mod items;
+pub mod pathfinding;
+pub mod tick;
 pub mod types;
 
+pub use aoi::{BucketCoord, BucketMigration, SpatialBucket, SpatialGrid, BUCKET_SIZE};
 pub use bitpacking::{BitpackError, MovementDelta};
 pub use collision::CollisionGrid;
+pub use items::{
+    drop_item_to_floor, pickup_floor_item, FloorItem, FloorItemManager, Inventory, ItemError,
+    ItemInstance, ItemInstanceId,
+};
+pub use pathfinding::{
+    find_nearest_walkable, find_path, octile_distance, PathResult, COST_CARDINAL, COST_DIAGONAL,
+    DEFAULT_MAX_EXPANSIONS,
+};
+pub use tick::{Tick, TickClock, TICK_DURATION_MICROS, TICK_DURATION_MILLIS, TICK_RATE_HZ};
 pub use types::{Direction, EntityId, Position, TypeError};
+
 
 /// Operação Unitária Pura: Tenta mover uma entidade em uma direção respeitando o grid de colisão.
 ///

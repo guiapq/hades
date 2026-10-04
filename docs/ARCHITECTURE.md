@@ -20,7 +20,7 @@ O Hades baseia-se em quatro pilares conceituais:
 ## 2. A Camada de Transporte e Rede
 
 ### 2.1 WebTransport & QUIC vs. Legado TCP
-Os emuladores clássicos (rAthena, OpenTibia) foram projetados em TCP cru, sofrendo com **Head-of-Line (HoL) Blocking**: quando um único pacote de movimento é perdido em uma rota congestionada, toda a fila do TCP congela até a retransmissão.
+Os servidores clássicos de MMORPG dos anos 2000 foram projetados em TCP cru, sofrendo com **Head-of-Line (HoL) Blocking**: quando um único pacote de movimento é perdido em uma rota congestionada, toda a fila do TCP congela até a retransmissão.
 
 O Hades adota canais desacoplados:
 * **Datagramas Não-Confiáveis (Unreliable Datagrams):** Para posições de entidades, direção, pings e inputs contínuos. Perdas são descartadas; o próximo tick envia o estado mais recente.

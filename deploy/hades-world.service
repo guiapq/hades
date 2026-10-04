@@ -1,0 +1,17 @@
+[Unit]
+Description=Project Hades World Simulation Server (QUIC/WebTransport AoI 20Hz)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/hades
+EnvironmentFile=/home/ubuntu/hades/.env
+ExecStart=/home/ubuntu/hades/target/release/hades-world
+Restart=always
+RestartSec=3
+LimitNOFILE=65535
+MemoryMax=96M
+
+[Install]
+WantedBy=multi-user.target

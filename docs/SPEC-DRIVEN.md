@@ -8,7 +8,7 @@
 
 Servidores de jogos e sistemas concorrentes de rede são conhecidos pela extrema facilidade de introduzir *bugs silenciosos*, *race conditions* e *comportamento não-determinístico*. 
 
-No rAthena e em motores legados, regras de combate e movimentação foram empilhadas ao longo de 20 anos sem especificação formal, resultando em:
+Em motores de jogos legados dos anos 2000, regras de combate e movimentação foram empilhadas ao longo de décadas sem especificação formal, resultando em:
 * Efeitos colaterais imprevisíveis entre sistemas;
 * Falta de cobertura de testes unitários;
 * Impossibilidade de validar se um tick é 100% determinístico.

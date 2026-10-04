@@ -2,6 +2,12 @@
 resolver = "2"
 members = [
     "crates/hades-core",
+    "crates/hades-net",
+    "crates/hades-ro-prere",
+    "crates/hades-styx",
+    "crates/berenice",
+    "crates/hades-login",
+    "crates/hades-world",
 ]
 
 [workspace.package]

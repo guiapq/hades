@@ -8,7 +8,7 @@
 
 ## 🎯 Visão do Projeto
 
-O **Hades** nasce para romper com a arquitetura herdada dos anos 2000 (rAthena, eAthena, TFS/OpenTibia). Em vez de manter retrocompatibilidade com clientes e protocolos legados em TCP síncrono, o Hades é uma **engine de backend moderna construída do zero em Rust**, voltada para desenvolvedores de **MMORPGs indies** modernos (2D e 2.5D).
+O **Hades** nasce para romper com a arquitetura legada dos anos 2000. Em vez de manter retrocompatibilidade com clientes e protocolos legados em TCP síncrono, o Hades é uma **engine de backend moderna construída do zero em Rust**, voltada para desenvolvedores de **MMORPGs indies** modernos (2D e 2.5D).
 
 ### Pilares Fundamentais:
 1. **Rede Moderna (Zero Head-of-Line Blocking):** WebTransport e QUIC nativos (HTTP/3) suportando clientes Desktop, Mobile e Web (WebGPU/Canvas) no mesmo protocolo e sem proxies.
@@ -55,7 +55,7 @@ Consulte a documentação técnica detalhada em:
   - Grade espacial em cubos/buckets $O(1)$ para publicação/subscrição de visão.
   - Compressão delta com bitmasks (estado compacto).
 - [ ] **Fase 3: Módulos de Simulação 2D/2.5D**
-  - Grid de células (estilo Ragnarok/Tibia) com bitset de colisão.
+  - Grid de células (estilo clássico 2D/2.5D) com bitset de colisão.
   - Movimentação, interpolação e sistema de combate atômico.
 - [ ] **Fase 4: Runtime de Scripts & Persistência**
   - Integração de runtime WASM/Lua com hot-reload.

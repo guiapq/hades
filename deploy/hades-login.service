@@ -1,0 +1,17 @@
+[Unit]
+Description=Project Hades Login Server (QUIC/WebTransport TLS 1.3)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/hades
+EnvironmentFile=/home/ubuntu/hades/.env
+ExecStart=/home/ubuntu/hades/target/release/hades-login
+Restart=always
+RestartSec=3
+LimitNOFILE=65535
+MemoryMax=64M
+
+[Install]
+WantedBy=multi-user.target

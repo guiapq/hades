@@ -8,7 +8,7 @@
 use crate::types::Position;
 
 /// Grid de colisão 2D compacto com representação em bitset.
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct CollisionGrid {
     pub width: u16,
     pub height: u16,
@@ -94,15 +94,24 @@ mod tests {
         let mut grid = CollisionGrid::new(100, 100, true);
         let pos = Position::new_unchecked(15, 30);
 
-        assert!(grid.is_walkable(pos), "Célula deveria estar livre inicialmente");
+        assert!(
+            grid.is_walkable(pos),
+            "Célula deveria estar livre inicialmente"
+        );
 
         // Bloqueia a célula (parede)
         grid.set_walkable(pos, false);
-        assert!(!grid.is_walkable(pos), "Célula deveria estar bloqueada após set_walkable(false)");
+        assert!(
+            !grid.is_walkable(pos),
+            "Célula deveria estar bloqueada após set_walkable(false)"
+        );
 
         // Libera novamente
         grid.set_walkable(pos, true);
-        assert!(grid.is_walkable(pos), "Célula deveria estar livre novamente");
+        assert!(
+            grid.is_walkable(pos),
+            "Célula deveria estar livre novamente"
+        );
     }
 
     #[test]
